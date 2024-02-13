@@ -3,7 +3,7 @@
 /*Configuração geral.*/
 :root{
     /*Config de corres:*/
-    --cor0:rgb(236, 233, 233);
+    --cor0:rgb(236, 233, 233); /*Não é branco!*/
     --cor1:rgb(163, 163, 163);
     --cor2:rgba(143, 188, 143, 0.514);
 
@@ -32,9 +32,7 @@ footer{
     color: white;
     text-align: center;
 }
-/*Fim das configurações gerais.*/
 
-/*Configuração da tela de saír:*/
 /*Inicio configuração do nav:*/
 .btn-nav{
     height: 40px;
@@ -52,7 +50,44 @@ footer{
 }
 
 /*Fim da configuração variações dos botões do nav.*/
+/*Fim das configurações gerais.*/
 
+/*Inicio configuração da tela de index:*/
+.configMainIndex{
+    display: flex;
+    justify-content: space-around;
+}
+.indexBorderCards{
+    margin-top: 10px;
+    border: 1px solid  black;
+    border-radius: 11px 11px 0px 0px;
+    width: 200px;
+    height: 150px;
+}
+
+.indexBorderCards:hover{
+    border: 2px solid black;
+}
+
+.h2CardsIndex{
+    margin: 0%;
+    border: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 2px;
+    font-size: 15px;
+    color: var(--cor0);
+    background-color: var(--cor1);
+}
+
+.resultadoCardsIndex{
+    margin: 0%;
+    padding: 1px;
+    background-color: var(--cor0);
+}
+
+/*Fim configuração da tela de index:*/
+
+/*Configuração da tela de saír:*/
 /*Inicio configuração dos section:*/
 section#decoracao-section-1{
     background-color: var(--cor1);
