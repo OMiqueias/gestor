@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/imgLogos/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/imgLogos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/imgLogos/favicon-16x16.png">
+    <script src="src/confGerarPdf.js" defer></script>
+    <link rel="stylesheet" href="src/style.css">
+    <title>Gestor: Termo de 10 dias</title>
+</head>
+<body>
+    <header> <!--Cabeçalho.-->
+        <nav id="menu-principal"> <!--Menu de navegação.-->
+            <a href="index.html"><button class="btn-nav">&#x1F3E0 Inicío</button></a>
+            <a href="#"><button class="btn-nav">Emitir</button></a>
+            <a href="movimentar.html"><button class="btn-nav">Movimentar</button></a>
+            <a href="relatorios.html"><button class="btn-nav">Relatórios</button></a>
+            <a href="perfil.html"><button class="btn-nav">Perfil</button></a>
+            <a href="Informacoes.html"><button class="btn-nav">Informações</button></a>
+            <a href="sair.html"><button class="btn-nav">Saír</button></a>
+        </nav>
+    </header>
+    <main>
+        <section class="areaFormulario">
+            <h1 class="h1-termoResp-10">FORMULÁRIO - TERMO DE RESPONSABILIDADE</h1>
+            <p>Aqui vai o Formulário</p>
+            <button class="btnPrint" onclick="printArea(areaImpressao)">Imprimir</button>
+        </section>
+        <section class="areaImpressao" id="areaImpressao">
+            <h1 class="h1-termoResp-10">TERMO DE RESPONSABILIDADE</h1>
+            <article class="areTextPadrao">
+                <p>Fica ao sr. <span class="span-termoResp">(nome)</span>, número de registro <span class="span-termoResp">(nº)</span>, formalmente notificado para que devolva os equipamentos e/ou ferramentas de trabalho que foram entregues em sua posse, para execução das atividades de trabalho, guarda e conservação no prazo de 10 (dez) dias a contar da assinatura deste termo em razão de INVENTÁRIO DE TERMINAIS.
+                    A ausência de justificativa fundamentada e comprovada para a não devolução em eventual hipótese de perda e/ou extravio dos itens retirados por mim conforme relação discriminada em anexo, implica automaticamente no desconto do valor do equipamento/ferramenta dos meus vencimentos ou verbas rescisórias, nos termos da Cláusula 12 de meu contrato de trabalho, autorizado pelo artigo 462 da CLT e pelo instrumento coletivo vigente.</p>
+            </article>
+            <article id="div-01">
+                <h1 class="h1-termoResp-10">EQUIPAMENTO(S)/ SERIAL FALTANTE:</h1>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
