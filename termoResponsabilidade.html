@@ -11,17 +11,44 @@
     <title>Gestor: Termo de 10 dias</title>
 </head>
 <body>
-    <header> <!--Cabeçalho.-->
-        <nav id="menu-principal"> <!--Menu de navegação.-->
-            <a href="index.html"><button class="btn-nav">&#x1F3E0 Inicío</button></a>
-            <a href="#"><button class="btn-nav">Emitir</button></a>
-            <a href="movimentar.html"><button class="btn-nav">Movimentar</button></a>
-            <a href="relatorios.html"><button class="btn-nav">Relatórios</button></a>
-            <a href="perfil.html"><button class="btn-nav">Perfil</button></a>
-            <a href="Informacoes.html"><button class="btn-nav">Informações</button></a>
-            <a href="sair.html"><button class="btn-nav">Saír</button></a>
-        </nav>
-    </header>
+    <nav id="menu-principal"> <!--Menu de navegação.-->
+        <ul>
+            <li>
+                <a href="index.html">Inicío</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">Emitir</a> <!--Não deve ter link-->
+                <div class="dropdown-emitir"> <!--Outras> menu dropdown-->
+                     <a href="#">Termo 10 dias</a>
+                     <a href="emitir24h">Termo de 24h</a>
+                     <a href="emitirTermoEpi">Termo EPI</a>
+                     <a href="emitirTermoUni">Termo Uniforme</a>
+                     <a href="emitirTermoPDA">Termo PDA</a>
+                     <a href="emitirTermoMedFibra">Termo Medidor HFC</a>
+                     <a href="emitirTermoKitFibra">Termo Kit Fibra</a>
+                     <a href="emitirTermoBonificacao">Termo Bonificação</a>
+                     <a href="emitirAutorizacaoDesconto">Autorização Desconto</a>
+                     <a href="emitirTermoFerramental">Termo ferramental</a>
+                     <a href="emitirTermoFerramental">Termo Miscelâneas</a>
+                </div>
+            </li>
+            <li>
+                <a href="movimentar.html">Movimentar</a>
+            </li>
+            <li>
+                <a href="relatorios.html">Relatórios</a>
+            </li>
+            <li>
+                <a href="perfil.html">Perfil</a>
+            </li>
+            <li>
+                <a href="Informacoes.html">Informações</a>
+            </li>
+            <li>
+                <a href="sair.html">Saír</a>
+            </li>
+        </ul>
+    </nav>
     <main>
         <section class="areaFormulario">
             <h1 class="h1-termoResp-10">FORMULÁRIO - TERMO DE RESPONSABILIDADE</h1>

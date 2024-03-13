@@ -12,6 +12,7 @@
 }
 body{
     margin: 0%;
+    padding: 0%;
     font-family:var(--font0);
     background-color: var(--cor0);
 }
@@ -29,24 +30,48 @@ footer{
     color: white;
     text-align: center;
 }
+/*Fim das configurações gerais.*/
 
 /*Inicio configuração do nav:*/
-.btn-nav{
-    max-height: 40px;
-    min-height: 30px;
-    max-width: 100px;
-    border: none;
+nav{
     background-color: var(--cor1);
-    color: white;
+}
+
+nav ul{
+    margin: 0%;
+    padding: 0%;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav li a{
+    display: inline-block;
+    padding: 12px;
     font-size: 15px;
+    color: white;
+    text-decoration: none;
 }
-/*Inicio configuração variações dos botões do nav:*/
-.btn-nav:hover{
+
+nav li a:hover{
     background-color: var(--cor2);
-    font-weight: bold;
 }
-/*Fim da configuração variações dos botões do nav.*/
-/*Fim das configurações gerais.*/
+
+.dropdown-emitir{
+    display: none;
+    position: absolute;
+    background-color: var(--cor1);
+}
+
+.dropdown-emitir a{
+    display: block;
+}
+
+.dropdown:hover .dropdown-emitir{
+    display: block;
+}
+/*Fim configuração NAV.*/
 
 /*Inicio configuração da tela de index:*/
 .configMainIndex{
