@@ -208,7 +208,6 @@ section#decoracao-section-2 {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .inputEnderecavel {
@@ -217,7 +216,8 @@ section#decoracao-section-2 {
 
 .areaAssinatura {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
 }
 
