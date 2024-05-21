@@ -84,55 +84,73 @@
 
                 <h1 class="h1-termoResp-10">EQUIPAMENTO(S)/ SERIAL FALTANTE:</h1>
 
-                <div>
-                    <form class="formularioEnderecaveis10dias" action="">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel1" id="iEnderecavel1"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel2" id="iEnderecavel2"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel3" id="iEnderecavel3"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel4" id="iEnderecavel4"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel5" id="iEnderecavel5"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel6" id="iEnderecavel6"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel7" id="iEnderecavel7"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel8" id="iEnderecavel8"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel9" id="iEnderecavel9"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel10" id="iEnderecavel10"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel11" id="iEnderecavel11"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel12" id="iEnderecavel12"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel13" id="iEnderecavel13"
-                            maxlength="30">
-                        <input class="inputEnderecavel" type="text" name="iEnderecavel14" id="iEnderecavel14"
-                            maxlength="30">
-                    </form>
-                </div>
-                <div class="areaAssinatura">
-                    <p>Instalador/Fiscal/Coordenador:</p>
-                    <input class="assinatura" type="text" name="assinaturaPrincipal" id="assinaturaPrincipal"
-                    maxlength="30">
-                    <p>Testemunha 1:</p>
-                    <input class="assinatura" type="text" name="assinaturaTestemunha" id="assinaturaTestemunha1"
-                    maxlength="30">
-                    <p>Testemunha 2:</p>
-                    <input class="assinatura" type="text" name="assinaturaTestemunha" id="assinaturaTestemunha2"
-                    maxlength="30">
-                </div>
+                <form class="formularioEnderecaveis10dias" action="">
+                    <input class="inputEnderecavel" type="text" name="iEnderecavel1" id="iEnderecavel1" maxlength="30">
+                    <input class="inputEnderecavel" type="text" name="iEnderecavel2" id="iEnderecavel2" maxlength="30">
+                    <input class="inputEnderecavel" type="text" name="iEnderecavel3" id="iEnderecavel3" maxlength="30">
+                    <input class="inputEnderecavel" type="text" name="iEnderecavel4" id="iEnderecavel4" maxlength="30">
+                    <input class="inputEnderecavel" type="text" name="iEnderecavel5" id="iEnderecavel5" maxlength="30">
+                    <input class="inputEnderecavel" type="text" name="iEnderecavel6" id="iEnderecavel6" maxlength="30">
+                    <input class="inputEnderecavel" type="text" name="iEnderecavel7" id="iEnderecavel7" maxlength="30">
+                    <input class="inputEnderecavel" type="text" name="iEnderecavel8" id="iEnderecavel8" maxlength="30">
+                    <input class="inputEnderecavel" type="text" name="iEnderecavel9" id="iEnderecavel9" maxlength="30">
+                    <input class="inputEnderecavel" type="text" name="iEnderecavel10" id="iEnderecavel10"
+                        maxlength="30">
+                    <input class="inputEnderecavel" type="text" name="iEnderecavel11" id="iEnderecavel11"
+                        maxlength="30">
+                    <input class="inputEnderecavel" type="text" name="iEnderecavel12" id="iEnderecavel12"
+                        maxlength="30">
+                </form>
             </article>
-
-        </section>
-
+            <div class="signature-container">
+                <div class="signature-field">
+                    <div class="signature-line"></div>
+                    <p>Instalador/Fiscal</p>
+                </div>
+                <div class="signature-field">
+                    <div class="signature-line"></div>
+                    <p>Testemunha 1</p>
+                </div>
+                <div class="signature-field">
+                    <div class="signature-line"></div>
+                    <p>Testemunha 2</p>
+                </div>
+            </div>
+            <section class="areaDataFormPrazo">
+                <form class="fomularioPrazo10" action="" method="post">
+                    <label for="iDataIni">Início:</label>
+                    <input type="date" name="date" id="iDataIni">
+                    <input type="button" value="Calcular" onclick="calcData()">
+                    <div id="iDataMax">...</div>
+                </form>
+            </section>
     </main>
+    <script>
+        function calcData() {
+            // Obtém a data inicial do input
+            let dataIni = document.querySelector('#iDataIni').value;
+            // Verifica se a data inicial foi fornecida
+            if (!dataIni) {
+                alert('Por favor, insira uma data de início.');
+                return;
+            }
 
+            // Converte a data inicial para um objeto Date
+            let dataIniDate = new Date(dataIni);
+            // Adiciona 10 dias à data inicial
+            dataIniDate.setDate(dataIniDate.getDate() + 11);
+
+            // Formata a nova data no formato brasileiro (DD/MM/YYYY)
+            let dia = String(dataIniDate.getDate()).padStart(2, '0');
+            let mes = String(dataIniDate.getMonth() + 1).padStart(2, '0'); // Mês é zero-indexado
+            let ano = dataIniDate.getFullYear();
+
+            let prazo = `${dia}/${mes}/${ano}`;
+
+            // Atualiza o conteúdo do div com o novo prazo de resolução
+            document.querySelector('#iDataMax').innerHTML = `Prazo para resolução: ${prazo}`;
+        }
+    </script>
 </body>
 
 </html>
